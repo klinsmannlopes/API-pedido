@@ -1,6 +1,29 @@
 const express = require('express');
 const controller = require('../controller/spoiler');
 
+const Spoiler = require("../model/spoiler");
+const status = require("http-status");
+
+function intervalFunc() {
+
+  Spoiler.findAll()
+    .then(spoilers => {
+
+        spoilers.forEach(item => {
+            console.log(item.dataValues);
+        });
+
+        console.log("teste");
+        console.log("");
+        console.log("");
+        console.log("");
+    })
+    .catch(erro => console.log(erro));
+    
+}
+  
+setInterval(intervalFunc, 2000);
+
 const router = express.Router();
 
 router.get('/spoilers/:id', controller.buscarUm);
