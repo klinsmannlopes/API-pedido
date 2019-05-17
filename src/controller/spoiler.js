@@ -59,7 +59,7 @@ exports.atualizar = (request, response, next) => {
   const espoliador = request.body.espoliador;
   const descricao = request.body.descricao;
 
-  Spoiler. findByPk(id)
+  Spoiler.findByPk(id)
     .then((spoiler) => {
       if(spoiler) {
         Spoiler.update(
