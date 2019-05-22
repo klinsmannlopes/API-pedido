@@ -23,7 +23,7 @@ exports.buscarTodos = (request, response, next) => {
   if (!Number.isInteger(limite) || !Number.isInteger(pagina)) {
     response.status(status.BAD_REQUEST).send();
   }
-
+  console.log("teste");
   const ITENS_POR_PAGINA = 10;
 
   limite = limite > ITENS_POR_PAGINA || limite <= 0 ? ITENS_POR_PAGINA : limite;
