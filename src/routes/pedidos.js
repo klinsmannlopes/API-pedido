@@ -7,12 +7,10 @@ const sel = require("../database/oracle");
 
 function start(){
     //setInterval(sel.inserirPedidos, 1000);
-    //setInterval(sel.teste("teste"), 1000);
+    setInterval(sel.inserir, 3000);
 }
 
 start();
-
-
 
 //¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 const router = express.Router();

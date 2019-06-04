@@ -1,7 +1,7 @@
 const http = require("http");
 const express = require("express");
 const status = require("http-status");
-const spoilersRoute = require("./routes/spoilers");
+const spoilersRoute = require("./routes/pedidos");
 const sequelize = require("./database/database");
 
 const app = express();
